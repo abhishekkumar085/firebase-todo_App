@@ -33,10 +33,13 @@ export default function useFirebaseAuth(){
 
 
     }
-    const singOut=()=>{
-        authSignOut(auth).then(()=>clear())
-    }
-
+    // const singOut=()=>{
+    //     authSignOut(auth).then(()=>clear())
+    // }
+    const signOut = () => {
+        authSignOut(auth).then(() => clear());
+    };
+    
     useEffect(()=>{
         const unsubscribe=onAuthStateChanged(auth,authStateChanged)
         return()=> unsubscribe();

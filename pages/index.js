@@ -20,7 +20,7 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase/firebase";
 export default function Home() {
-    const { authUser, isLoading ,signOut} = useAuth();
+    const { signOut,authUser, isLoading } = useAuth();
     const[todoInput,setTodoInput]=useState("")
     const[todos,setTodos]=useState([])
   const router=useRouter()
@@ -98,6 +98,7 @@ const deleteTodo=async(docId)=>{
         addTodo()
     }
  }
+
 
     return !authUser?(<Loader/>
     ):(
