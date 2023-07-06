@@ -31,6 +31,8 @@ const LoginForm = () => {
         try {
             const user=await signInWithEmailAndPassword(auth, email, password);
             console.log(user)
+            alert("heeeeee")
+            router.push("/")
         } catch (error) {
             console.error("An error occured", error);
         }

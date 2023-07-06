@@ -129,7 +129,7 @@ const deleteTodo=async(docId)=>{
                     </div>
                 </div>
                 <div className="my-10">
-                    {todos.length>0 && map((todo) => (
+                    {todos.length>0 && todos.map((todo) => (
                         // eslint-disable-next-line react/jsx-key
                         <div key={todo.id}  className="flex items-center justify-between mt-4">
                             <div className="flex items-center gap-3">
